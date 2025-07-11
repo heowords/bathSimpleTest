@@ -1,0 +1,6 @@
+test:
+  - curl_use : 1
+    ip : 127.0.9.179
+    port: 8080
+    api : admin/mdb_sync_controller
+    data : ./data.json
