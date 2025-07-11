@@ -124,6 +124,10 @@ def run_tests(yaml_path):
         if port is None:
             logging.error("port is none")
             continue
+        if api is None:
+            logging.error("api is none")
+        if api.startswith('/'):
+            logging.warning("api is start / but we had add it ")
         url = f" http://{ip}:{port}/{api}"
         logging.info(f"正在执行测试用例: {api}")
 
